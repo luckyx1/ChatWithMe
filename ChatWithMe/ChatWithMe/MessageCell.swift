@@ -11,10 +11,17 @@ import UIKit
 class MessageCell: UITableViewCell {
    
 
+    @IBOutlet weak var userLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
     var msg: Message!{
         didSet{
             messageLabel.text = msg.text!
+            if let user = msg.user{
+                userLabel.isHidden = false
+                userLabel.text = user.username!
+            }else{
+                userLabel.isHidden = true
+            }
         }
     }
     

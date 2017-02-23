@@ -49,6 +49,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Add code to be run periodically
         let query = PFQuery(className: "Message")
         query.order(byDescending: "createdAt")
+        query.includeKey("user")
         query.limit = 20
         // fetch data asynchronously
         query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
