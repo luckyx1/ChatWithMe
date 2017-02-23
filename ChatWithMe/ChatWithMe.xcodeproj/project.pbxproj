@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		48460A3D1E5E88B800B0CC29 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48460A3C1E5E88B800B0CC29 /* ChatViewController.swift */; };
 		48460A3F1E5E8B2600B0CC29 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48460A3E1E5E8B2600B0CC29 /* Message.swift */; };
+		48460A411E5E8DCE00B0CC29 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48460A401E5E8DCE00B0CC29 /* MessageCell.swift */; };
 		48D47A821E5BD9850006C488 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D47A811E5BD9850006C488 /* AppDelegate.swift */; };
 		48D47A871E5BD9850006C488 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48D47A851E5BD9850006C488 /* Main.storyboard */; };
 		48D47A891E5BD9850006C488 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48D47A881E5BD9850006C488 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 		4579203F42FA32564529A4D1 /* Pods-ChatWithMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatWithMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatWithMe/Pods-ChatWithMe.debug.xcconfig"; sourceTree = "<group>"; };
 		48460A3C1E5E88B800B0CC29 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		48460A3E1E5E8B2600B0CC29 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		48460A401E5E8DCE00B0CC29 /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		48D47A7E1E5BD9850006C488 /* ChatWithMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatWithMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48D47A811E5BD9850006C488 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48D47A861E5BD9850006C488 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				48D47A931E5BDF770006C488 /* LoginViewController.swift */,
 				48460A3C1E5E88B800B0CC29 /* ChatViewController.swift */,
 				48460A3E1E5E8B2600B0CC29 /* Message.swift */,
+				48460A401E5E8DCE00B0CC29 /* MessageCell.swift */,
 			);
 			path = ChatWithMe;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48D47A941E5BDF770006C488 /* LoginViewController.swift in Sources */,
+				48460A411E5E8DCE00B0CC29 /* MessageCell.swift in Sources */,
 				48460A3F1E5E8B2600B0CC29 /* Message.swift in Sources */,
 				48460A3D1E5E88B800B0CC29 /* ChatViewController.swift in Sources */,
 				48D47A821E5BD9850006C488 /* AppDelegate.swift in Sources */,
