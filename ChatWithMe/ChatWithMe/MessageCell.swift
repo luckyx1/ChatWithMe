@@ -9,10 +9,19 @@
 import UIKit
 
 class MessageCell: UITableViewCell {
+   
 
+    @IBOutlet weak var messageLabel: UILabel!
+    var msg: Message!{
+        didSet{
+            messageLabel.text = msg.text!
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

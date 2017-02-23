@@ -16,6 +16,10 @@ class Message: NSObject {
         self.text = msg
     }
     
+    init(object: PFObject){
+        self.text = object["text"] as? String
+    }
+    
     func postMessage( withCompletion completion: PFBooleanResultBlock?) {
         // Create Parse object PFObject
         let msg = PFObject(className: "Message")

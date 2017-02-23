@@ -7,15 +7,22 @@
 //
 
 import UIKit
+import Parse
 
-class ChatViewController: UIViewController {
+class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var msgText: UITextField!
+    @IBOutlet weak var tableView: UITableView!
+    var messages: [Message] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Chat"
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
 
         // Do any additional setup after loading the view.
+        Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(ChatViewController.onTimer), userInfo: nil, repeats: true)
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,6 +39,40 @@ class ChatViewController: UIViewController {
                 print(error?.localizedDescription)
             }
         }
+    }
+    
+    func onTimer() {
+        self.getData()
+    }
+    
+    func getData(){
+        // Add code to be run periodically
+        let query = PFQuery(className: "Message")
+        query.order(byDescending: "createdAt")
+        query.limit = 20
+        // fetch data asynchronously
+        query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
+        if let posts = posts{
+            for post in posts{
+                
+                self.messages.append(Message(object: post))
+            }
+            self.tableView.reloadData()
+    
+            }else{
+                print(error?.localizedDescription)
+            }
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MessageCell", for: indexPath) as! MessageCell
+        cell.msg = self.messages[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.messages.count
     }
 
     /*
