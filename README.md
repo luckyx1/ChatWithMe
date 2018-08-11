@@ -2,7 +2,7 @@
 
 **ChatWithMe** is a chat client app using Parse as its backend.
 
-Time spent: **0** hours spent in total
+Time spent: **4** hours spent in total
 
 ## User Stories
 
